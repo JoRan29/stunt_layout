@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  font-size: 16px;
+  --font-primary: "PT Sans", sans-serif;
+  --font-secondary: "PT Serif", serif;
+  --bg-main: #ffffff;
+  --text-primary: #040404;
+  --accent-primary: #86ddf3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+}
+/*# sourceMappingURL=style.css.map */
