@@ -186,6 +186,20 @@ footer {
 
 // Intermediate
 @media only screen and (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.9fr 1.2fr 0.9fr 1fr 1.3fr 0.7fr 1fr 1fr;
+    grid-template-areas:
+      "box-1 article-1"
+      "img-1 box-2"
+      "article-2 box-2"
+      "article-2 img-2"
+      "box-3 img-2"
+      "box-3 article-3"
+      "img-3 article-3"
+      "img-3 box-4"
+      "article-4 box-4";
+  }
 }
 
 // Large
