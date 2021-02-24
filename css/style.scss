@@ -47,9 +47,11 @@ header {
   height: 300px;
   display: grid;
   justify-items: center;
+  padding: 0 10px 0;
 
   h1 {
     font-family: var(--font-secondary);
+    font-size: 3vw;
     font-weight: 200;
     align-self: end;
   }
@@ -65,6 +67,7 @@ main {
   width: 80%;
   display: grid;
   gap: 20px 20px;
+  padding: 20px;
 
   img {
     background-position: center;
@@ -108,6 +111,25 @@ main {
   .article-4 {
     grid-area: article-4;
   }
+
+  article {
+    justify-items: center;
+    text-align: center;
+
+    h2 {
+      align-self: center;
+    }
+  }
+}
+
+article {
+  display: grid;
+  padding: 10px;
+
+  h2 {
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+  }
 }
 
 .box {
@@ -124,21 +146,38 @@ main {
   }
 }
 
-article {
-  display: grid;
-  padding: 10px;
-  justify-items: center;
-  text-align: center;
-
-  h2 {
-    text-transform: uppercase;
-    font-family: var(--font-secondary);
-    align-self: center;
-  }
-}
-
 footer {
   width: 80%;
+  display: grid;
+  padding: 10px;
+
+  article {
+    h2 {
+      max-width: 10ch;
+      padding-top: 30px;
+      margin-bottom: -30px;
+      font-size: 3vw;
+    }
+
+    p {
+      align-self: start;
+      max-width: 45ch;
+    }
+  }
+
+  img {
+    background-position: center;
+    background-size: cover;
+  }
+
+  // Grid Areas
+  .footer__article {
+    grid-area: footer__article;
+  }
+  .footer__img {
+    grid-area: footer_img;
+    background-image: url(/assets/footer.jpg);
+  }
 }
 
 // Mobile
@@ -161,5 +200,26 @@ footer {
       "img-2 box-2 article-2"
       "box-3 article-3 img-3"
       "article-4 box-4 img-3";
+  }
+
+  footer {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(500px, auto);
+    grid-template-areas: "footer__article footer_img";
+
+    h1 {
+      position: absolute;
+      font-size: 4vw;
+      color: var(--accent-primary);
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%);
+      text-align: center;
+
+      span {
+        color: var(--bg-main);
+      }
+    }
   }
 }

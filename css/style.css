@@ -46,10 +46,12 @@ header {
   display: -ms-grid;
   display: grid;
   justify-items: center;
+  padding: 0 10px 0;
 }
 
 header h1 {
   font-family: var(--font-secondary);
+  font-size: 3vw;
   font-weight: 200;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -67,6 +69,7 @@ main {
   display: -ms-grid;
   display: grid;
   gap: 20px 20px;
+  padding: 20px;
 }
 
 main img {
@@ -121,6 +124,28 @@ main .article-4 {
   grid-area: article-4;
 }
 
+main article {
+  justify-items: center;
+  text-align: center;
+}
+
+main article h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+article {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+}
+
+article h2 {
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+}
+
 .box {
   background-color: var(--accent-primary);
   color: var(--bg-main);
@@ -136,24 +161,39 @@ main .article-4 {
   place-self: center;
 }
 
-article {
+footer {
+  width: 80%;
   display: -ms-grid;
   display: grid;
   padding: 10px;
-  justify-items: center;
-  text-align: center;
 }
 
-article h2 {
-  text-transform: uppercase;
-  font-family: var(--font-secondary);
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+footer article h2 {
+  max-width: 10ch;
+  padding-top: 30px;
+  margin-bottom: -30px;
+  font-size: 3vw;
 }
 
-footer {
-  width: 80%;
+footer article p {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  max-width: 45ch;
+}
+
+footer img {
+  background-position: center;
+  background-size: cover;
+}
+
+footer .footer__article {
+  grid-area: footer__article;
+}
+
+footer .footer__img {
+  grid-area: footer_img;
+  background-image: url(/assets/footer.jpg);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -163,6 +203,27 @@ footer {
     -ms-grid-rows: minmax(200px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
         grid-template-rows: minmax(200px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
         grid-template-areas: "box-1 article-1 img-1" "img-2 box-2 article-2" "box-3 article-3 img-3" "article-4 box-4 img-3";
+  }
+  footer {
+    position: relative;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: minmax(500px, auto);
+        grid-template-rows: minmax(500px, auto);
+        grid-template-areas: "footer__article footer_img";
+  }
+  footer h1 {
+    position: absolute;
+    font-size: 4vw;
+    color: var(--accent-primary);
+    bottom: 5%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    text-align: center;
+  }
+  footer h1 span {
+    color: var(--bg-main);
   }
 }
 /*# sourceMappingURL=style.css.map */
