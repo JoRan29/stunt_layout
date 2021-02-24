@@ -25,6 +25,43 @@ html {
 
 body {
   background-color: var(--bg-main);
+  font-family: var(--font-primary);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  min-width: 400px;
+  display: grid;
+  place-items: center;
+}
+
+header {
+  text-align: center;
+  color: var(--bg-main);
+  background-image: url(/assets/header.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  height: 300px;
+  display: grid;
+  justify-items: center;
+
+  h1 {
+    font-family: var(--font-secondary);
+    font-weight: 200;
+    align-self: end;
+  }
+}
+
+main {
+  width: 80%;
+  display: grid;
+}
+
+footer {
+  width: 80%;
 }
 
 // Mobile
