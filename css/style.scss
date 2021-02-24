@@ -64,13 +64,77 @@ header {
 main {
   width: 80%;
   display: grid;
+  gap: 20px 20px;
+
+  img {
+    background-position: center;
+    background-size: cover;
+  }
+
+  // Grid areas
+  .box-1 {
+    grid-area: box-1;
+  }
+  .box-2 {
+    grid-area: box-2;
+  }
+  .box-3 {
+    grid-area: box-3;
+  }
+  .box-4 {
+    grid-area: box-4;
+  }
+  .img-1 {
+    grid-area: img-1;
+    background-image: url(/assets/step-1.jpg);
+  }
+  .img-2 {
+    grid-area: img-2;
+    background-image: url(/assets/step-2.jpg);
+  }
+  .img-3 {
+    grid-area: img-3;
+    background-image: url(/assets/step-3-4.jpg);
+  }
+  .article-1 {
+    grid-area: article-1;
+  }
+  .article-2 {
+    grid-area: article-2;
+  }
+  .article-3 {
+    grid-area: article-3;
+  }
+  .article-4 {
+    grid-area: article-4;
+  }
 }
 
 .box {
   background-color: var(--accent-primary);
   color: var(--bg-main);
   font-family: var(--font-secondary);
+  padding: 20px;
+  display: grid;
+
+  h1 {
+    font-size: 8vw;
+    font-weight: 200;
+    place-self: center;
+  }
+}
+
+article {
+  display: grid;
   padding: 10px;
+  justify-items: center;
+  text-align: center;
+
+  h2 {
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    align-self: center;
+  }
 }
 
 footer {
@@ -87,4 +151,15 @@ footer {
 
 // Large
 @media only screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 0.8fr 1fr 1.2fr;
+    grid-template-rows:
+      minmax(200px, auto) minmax(300px, auto) minmax(300px, auto)
+      minmax(150px, auto);
+    grid-template-areas:
+      "box-1 article-1 img-1"
+      "img-2 box-2 article-2"
+      "box-3 article-3 img-3"
+      "article-4 box-4 img-3";
+  }
 }

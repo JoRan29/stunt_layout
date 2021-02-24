@@ -66,16 +66,103 @@ main {
   width: 80%;
   display: -ms-grid;
   display: grid;
+  gap: 20px 20px;
+}
+
+main img {
+  background-position: center;
+  background-size: cover;
+}
+
+main .box-1 {
+  grid-area: box-1;
+}
+
+main .box-2 {
+  grid-area: box-2;
+}
+
+main .box-3 {
+  grid-area: box-3;
+}
+
+main .box-4 {
+  grid-area: box-4;
+}
+
+main .img-1 {
+  grid-area: img-1;
+  background-image: url(/assets/step-1.jpg);
+}
+
+main .img-2 {
+  grid-area: img-2;
+  background-image: url(/assets/step-2.jpg);
+}
+
+main .img-3 {
+  grid-area: img-3;
+  background-image: url(/assets/step-3-4.jpg);
+}
+
+main .article-1 {
+  grid-area: article-1;
+}
+
+main .article-2 {
+  grid-area: article-2;
+}
+
+main .article-3 {
+  grid-area: article-3;
+}
+
+main .article-4 {
+  grid-area: article-4;
 }
 
 .box {
   background-color: var(--accent-primary);
   color: var(--bg-main);
   font-family: var(--font-secondary);
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.box h1 {
+  font-size: 8vw;
+  font-weight: 200;
+  place-self: center;
+}
+
+article {
+  display: -ms-grid;
+  display: grid;
   padding: 10px;
+  justify-items: center;
+  text-align: center;
+}
+
+article h2 {
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 footer {
   width: 80%;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    -ms-grid-columns: 0.8fr 1fr 1.2fr;
+        grid-template-columns: 0.8fr 1fr 1.2fr;
+    -ms-grid-rows: minmax(200px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
+        grid-template-rows: minmax(200px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
+        grid-template-areas: "box-1 article-1 img-1" "img-2 box-2 article-2" "box-3 article-3 img-3" "article-4 box-4 img-3";
+  }
 }
 /*# sourceMappingURL=style.css.map */
