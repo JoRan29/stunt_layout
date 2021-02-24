@@ -175,8 +175,11 @@ footer {
     grid-area: footer__article;
   }
   .footer__img {
-    grid-area: footer_img;
+    grid-area: footer__img;
     background-image: url(/assets/footer.jpg);
+  }
+  .footer__buzz {
+    grid-area: footer__buzz;
   }
 }
 
@@ -200,6 +203,25 @@ footer {
       "img-3 box-4"
       "article-4 box-4";
   }
+
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(350px, auto) minmax(30px, auto) minmax(
+        350px,
+        auto
+      );
+    gap: 0px 0px;
+    grid-template-areas:
+      "footer__article"
+      "footer__buzz"
+      "footer__img";
+
+    h1 {
+      font-size: 5vw;
+      color: var(--accent-primary);
+      text-align: center;
+    }
+  }
 }
 
 // Large
@@ -220,7 +242,7 @@ footer {
     position: relative;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(500px, auto);
-    grid-template-areas: "footer__article footer_img";
+    grid-template-areas: "footer__article footer__img";
 
     h1 {
       position: absolute;
