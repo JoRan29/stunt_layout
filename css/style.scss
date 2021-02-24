@@ -55,9 +55,22 @@ header {
   }
 }
 
+.subtitle {
+  width: 80%;
+  padding: 2%;
+  text-align: center;
+}
+
 main {
   width: 80%;
   display: grid;
+}
+
+.box {
+  background-color: var(--accent-primary);
+  color: var(--bg-main);
+  font-family: var(--font-secondary);
+  padding: 10px;
 }
 
 footer {
