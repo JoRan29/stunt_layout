@@ -25,6 +25,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  min-width: 400px;
 }
 
 .container {
@@ -51,7 +52,7 @@ header {
 
 header h1 {
   font-family: var(--font-secondary);
-  font-size: 3vw;
+  font-size: calc(14px + 3vw);
   font-weight: 200;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -156,7 +157,7 @@ article h2 {
 }
 
 .box h1 {
-  font-size: 8vw;
+  font-size: calc(24px + 8vw);
   font-weight: 200;
   place-self: center;
 }
@@ -166,13 +167,14 @@ footer {
   display: -ms-grid;
   display: grid;
   padding: 10px;
+  min-width: 400px;
 }
 
 footer article h2 {
   max-width: 10ch;
   padding-top: 30px;
   margin-bottom: -30px;
-  font-size: 3vw;
+  font-size: calc(18px + 2vw);
 }
 
 footer article p {
@@ -210,7 +212,7 @@ footer .footer__buzz {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 400px) {
+@media (max-width: 1024px) {
   footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -220,7 +222,7 @@ footer .footer__buzz {
         grid-template-areas: "footer__article" "footer__buzz" "footer__img";
   }
   footer h1 {
-    font-size: 5vw;
+    font-size: calc(24px + 5vw);
     color: var(--accent-primary);
     text-align: center;
   }
@@ -254,7 +256,7 @@ footer .footer__buzz {
   }
   footer h1 {
     position: absolute;
-    font-size: 4vw;
+    font-size: calc(12px + 4vw);
     color: var(--accent-primary);
     bottom: 5%;
     left: 50%;
