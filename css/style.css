@@ -42,7 +42,6 @@ header {
   background-image: url(/assets/header.jpg);
   background-position: center;
   background-size: cover;
-  width: 80%;
   height: 300px;
   display: -ms-grid;
   display: grid;
@@ -67,7 +66,6 @@ header h1 {
 }
 
 main {
-  width: 80%;
   display: -ms-grid;
   display: grid;
   gap: 20px 20px;
@@ -164,7 +162,6 @@ article h2 {
 }
 
 footer {
-  width: 80%;
   display: -ms-grid;
   display: grid;
   padding: 10px;
@@ -214,7 +211,11 @@ footer .footer__buzz {
 }
 
 @media (max-width: 1024px) {
+  header {
+    width: 95%;
+  }
   footer {
+    width: 95%;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: minmax(350px, auto) minmax(30px, auto) minmax(350px, auto);
@@ -223,7 +224,7 @@ footer .footer__buzz {
         grid-template-areas: "footer__article" "footer__buzz" "footer__img";
   }
   footer h1 {
-    font-size: calc(24px + 5vw);
+    font-size: calc(38px + 5vw);
     color: var(--accent-primary);
     text-align: center;
   }
@@ -233,21 +234,26 @@ footer .footer__buzz {
   main {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 0.9fr 1.2fr 0.9fr 1fr 1.3fr 0.7fr 1fr 1fr;
-        grid-template-rows: 1fr 0.9fr 1.2fr 0.9fr 1fr 1.3fr 0.7fr 1fr 1fr;
+    -ms-grid-rows: 1.1fr 0.8fr 1.4fr 0.8fr 1fr 1.3fr 0.7fr 0.9fr 1fr;
+        grid-template-rows: 1.1fr 0.8fr 1.4fr 0.8fr 1fr 1.3fr 0.7fr 0.9fr 1fr;
         grid-template-areas: "box-1 article-1" "img-1 box-2" "article-2 box-2" "article-2 img-2" "box-3 img-2" "box-3 article-3" "img-3 article-3" "img-3 box-4" "article-4 box-4";
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  header {
+    width: 80%;
+  }
   main {
-    -ms-grid-columns: 0.8fr 1fr 1.2fr;
-        grid-template-columns: 0.8fr 1fr 1.2fr;
-    -ms-grid-rows: minmax(200px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
-        grid-template-rows: minmax(200px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
+    width: 80%;
+    -ms-grid-columns: 0.85fr 0.95fr 1.2fr;
+        grid-template-columns: 0.85fr 0.95fr 1.2fr;
+    -ms-grid-rows: minmax(250px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
+        grid-template-rows: minmax(250px, auto) minmax(300px, auto) minmax(300px, auto) minmax(150px, auto);
         grid-template-areas: "box-1 article-1 img-1" "img-2 box-2 article-2" "box-3 article-3 img-3" "article-4 box-4 img-3";
   }
   footer {
+    width: 80%;
     position: relative;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;

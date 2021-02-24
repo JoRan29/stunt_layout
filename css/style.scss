@@ -44,7 +44,6 @@ header {
   background-image: url(/assets/header.jpg);
   background-position: center;
   background-size: cover;
-  width: 80%;
   height: 300px;
   display: grid;
   justify-items: center;
@@ -66,7 +65,6 @@ header {
 }
 
 main {
-  width: 80%;
   display: grid;
   gap: 20px 20px;
   padding: 20px;
@@ -149,7 +147,6 @@ article {
 }
 
 footer {
-  width: 80%;
   display: grid;
   padding: 10px;
   min-width: 400px;
@@ -208,7 +205,12 @@ footer {
 
 // Intermediate and Mobile
 @media (max-width: 1024px) {
+  header {
+    width: 95%;
+  }
+
   footer {
+    width: 95%;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(350px, auto) minmax(30px, auto) minmax(
         350px,
@@ -221,7 +223,7 @@ footer {
       "footer__img";
 
     h1 {
-      font-size: calc(24px + 5vw);
+      font-size: calc(38px + 5vw);
       color: var(--accent-primary);
       text-align: center;
     }
@@ -232,7 +234,7 @@ footer {
 @media only screen and (min-width: 768px) {
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.9fr 1.2fr 0.9fr 1fr 1.3fr 0.7fr 1fr 1fr;
+    grid-template-rows: 1.1fr 0.8fr 1.4fr 0.8fr 1fr 1.3fr 0.7fr 0.9fr 1fr;
     grid-template-areas:
       "box-1 article-1"
       "img-1 box-2"
@@ -248,10 +250,15 @@ footer {
 
 // Large
 @media only screen and (min-width: 1024px) {
+  header {
+    width: 80%;
+  }
+
   main {
-    grid-template-columns: 0.8fr 1fr 1.2fr;
+    width: 80%;
+    grid-template-columns: 0.85fr 0.95fr 1.2fr;
     grid-template-rows:
-      minmax(200px, auto) minmax(300px, auto) minmax(300px, auto)
+      minmax(250px, auto) minmax(300px, auto) minmax(300px, auto)
       minmax(150px, auto);
     grid-template-areas:
       "box-1 article-1 img-1"
@@ -261,6 +268,7 @@ footer {
   }
 
   footer {
+    width: 80%;
     position: relative;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(500px, auto);
