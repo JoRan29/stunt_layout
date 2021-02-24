@@ -148,7 +148,7 @@ article {
 
 footer {
   display: grid;
-  padding: 10px;
+  padding: 0 10px 10px;
   min-width: 400px;
 
   article {
@@ -161,7 +161,6 @@ footer {
 
     p {
       align-self: start;
-      max-width: 45ch;
     }
   }
 
@@ -227,6 +226,10 @@ footer {
       color: var(--accent-primary);
       text-align: center;
     }
+
+    p {
+      max-width: 80ch;
+    }
   }
 }
 
@@ -286,6 +289,10 @@ footer {
       span {
         color: var(--bg-main);
       }
+    }
+
+    p {
+      max-width: 50ch;
     }
   }
 }
